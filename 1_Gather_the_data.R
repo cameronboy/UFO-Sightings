@@ -14,7 +14,7 @@ head(states)
  
 
 #List of Links
-state_links <- htmlParse(url) %>% 
+state_links <- htmlParse(loc_url) %>% 
   xpathSApply(.,"//a/@href") %>% 
   as_data_frame() %>% 
   filter(row_number() > 2)
