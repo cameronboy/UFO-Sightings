@@ -66,25 +66,3 @@ addresses <- trunc_sight %>%
   select(addr) %>% 
   unique()
 
-
-addreses$loc <- geocode(addresses$addr)
-
-
-library(rgeolocate)
-
-rgeolocate()
-
-geo_key = "AIzaSyCYAZwta4y9p1jHNXZ_tO1NqpvzjxfWw9w"
-register_google(key = geo_key, account_type = "premium", day_limit = 100000)
-
-mapdist(c("houston, texas", "dallas"), "waco, texas")
-
-devtools::install_github("dkahle/ggmap")
-
-ggmap_credentials()
-
-install.packages("ggmap")
-
-library(ggmap)
-
-register_google()
